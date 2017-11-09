@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Facebook Mac Core/Facebook Mac Core/Facebook Mac Core.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Facebook Mac Login/Facebook Mac Login.xcodeproj">
+   </FileRef>
+</Workspace>
