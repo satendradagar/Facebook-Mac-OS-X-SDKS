@@ -1,3 +1,6 @@
 [submodule "Facebook Core and Login Swift"]
 	path = Facebook Core and Login Swift
 	url = https://github.com/satendradagar/Facebook-Mac-OS-Core-and-Login-Swift.git
+[submodule "FBSDKCoreKit/Bolt-OBJ_C"]
+	path = FBSDKCoreKit/Bolt-OBJ_C
+	url = https://github.com/BoltsFramework/Bolts-ObjC.git

@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Facebook Mac Core/Facebook Mac Core/Facebook Mac Core.xcodeproj">
+      location = "group:Facebook Core and Login Swift/Facebook Mac Login/Facebook Mac Login.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Facebook Mac Login/Facebook Mac Login.xcodeproj">
+      location = "group:Facebook Core and Login Swift/Facebook Mac Core/Facebook Mac Core/Facebook Mac Core.xcodeproj">
    </FileRef>
 </Workspace>
