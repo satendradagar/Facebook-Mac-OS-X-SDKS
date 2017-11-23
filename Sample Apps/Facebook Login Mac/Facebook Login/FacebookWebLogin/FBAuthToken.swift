@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+
+class FBAuthenticationToken: NSObject {
+    var authenticationToken = ""
+    var expiry: Date?
+    var permissions = ""
+
+    init(token: String, secondsToExpiry seconds: TimeInterval, permissions perms: String) {
+            super.init()
+            authenticationToken = token
+            if seconds != 0 {
+                expiry = Date(timeIntervalSinceNow: seconds)
+            }
+            permissions = perms
+        }
+}
+

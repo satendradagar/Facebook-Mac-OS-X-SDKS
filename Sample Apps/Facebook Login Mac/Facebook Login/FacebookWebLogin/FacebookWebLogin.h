@@ -6,7 +6,7 @@
 //  Copyright © 2017 Satendra. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Appkit/Appkit.h>
 
 //! Project version number for FacebookWebLogin.
 FOUNDATION_EXPORT double FacebookWebLoginVersionNumber;
