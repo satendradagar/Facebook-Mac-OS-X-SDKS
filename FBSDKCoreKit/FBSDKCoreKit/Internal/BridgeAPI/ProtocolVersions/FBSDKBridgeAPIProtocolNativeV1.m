@@ -307,11 +307,11 @@ static const struct
         // if we are adding this to the general pasteboard, then we want to remove it when we are done with the share.
         // the Facebook app will not clear the value with this version of the protocol, so we should do it when the app
         // becomes active again
-        NSString *pasteboardName = _pasteboard.name;
-        if ([pasteboardName isEqualToString:NSPasteboardNameGeneral] ||
-            [pasteboardName isEqualToString:NSPasteboardNameFind]) {
-          [[self class] clearData:data fromPasteboardOnApplicationDidBecomeActive:_pasteboard];
-        }
+//        NSString *pasteboardName = _pasteboard.name;
+//        if ([pasteboardName isEqualToString:NSPasteboardNameGeneral] ||
+//            [pasteboardName isEqualToString:NSPasteboardNameFind]) {
+//          [[self class] clearData:data fromPasteboardOnApplicationDidBecomeActive:_pasteboard];
+//        }
       }
       return dictionary;
     } else if ([invalidObject isKindOfClass:[NSURL class]]) {
