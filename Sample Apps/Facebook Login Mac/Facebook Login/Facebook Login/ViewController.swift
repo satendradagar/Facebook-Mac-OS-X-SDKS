@@ -14,6 +14,9 @@ class ViewController: NSViewController, FBTokenFacebookDelegate {
     
     func tokenResult(_ result: [AnyHashable : Any]) {
         print(result)
+
+        let answer = dialogOKCancel(question: "Ok?", text: result.description)
+
     }
     
     func requestResult(_ result: [AnyHashable : Any]) {
@@ -90,6 +93,16 @@ override var representedObject: Any? {
         }
     }
 
+
+    func dialogOKCancel(question: String, text: String) -> Bool {
+        let alert = NSAlert()
+        alert.messageText = question
+        alert.informativeText = text
+        alert.alertStyle = NSAlert.Style.warning
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+        return alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn
+    }
 
 }
 

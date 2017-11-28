@@ -40,11 +40,6 @@ public class FacebookLoginController: NSViewController, WebFrameLoadDelegate {
         cancel(nil)
     }
     
-    // MARK: Delegate
-    func showUI() {
-        // Notify parent that we're about to show UI
-        loginControler?.webViewWillShowUI()
-    }
     public func webView(_ sender: WebView!, didCommitLoadFor frame: WebFrame!) {
         let url: String = sender.mainFrameURL
         print("didCommitLoadForFrame: {\(url)}" )
@@ -100,11 +95,11 @@ public class FacebookLoginController: NSViewController, WebFrameLoadDelegate {
             let errorReason: String = extractParameter(LoginURLConstants.ResponseKeys.FBErrorReason, fromURL: url)
             print("error:\(errorReason)")
 //            window.orderOut(self)
-            loginControler?.setAccessToken(accessToken, expires: TimeInterval(Float(tokenExpires) ?? 0.0), permissions: permissions)
+//            loginControler?.setAccessToken(accessToken, expires: TimeInterval(Float(tokenExpires) ?? 0.0), permissions: permissions)
+            loginControler?.setAccessToken(accessToken, expires: TimeInterval(Float(tokenExpires) ?? 0.0), permissions: permissions, error: errorReason)
         }
         else {
             // If access token is not retrieved, UI is shown to allow user to login/authorize
-            showUI()
         }
         #if ALWAYS_SHOW_UI
             showUI()
