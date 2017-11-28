@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A83DBF51FC69C57001A4ED4 /* LoginKitURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A83DBF41FC69C57001A4ED4 /* LoginKitURLs.swift */; };
+		9ADCC9E21FC71EC90095350A /* FacebookLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADCC9E11FC71EC90095350A /* FacebookLoginController.swift */; };
+		9ADCC9E51FC71EF60095350A /* FacebookLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ADCC9E41FC71EF60095350A /* FacebookLoginController.xib */; };
+		9ADCC9E81FC8088D0095350A /* FacebookWebLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD408BB1FC1BF5200950035 /* FacebookWebLogin.framework */; };
+		9ADCC9E91FC8096F0095350A /* FacebookWebLogin.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD408BB1FC1BF5200950035 /* FacebookWebLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA7CE2941FB4B810004F7A4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CE2931FB4B810004F7A4A /* AppDelegate.swift */; };
 		EA7CE2961FB4B810004F7A4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CE2951FB4B810004F7A4A /* ViewController.swift */; };
 		EA7CE2981FB4B810004F7A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7CE2971FB4B810004F7A4A /* Assets.xcassets */; };
 		EA7CE29B1FB4B810004F7A4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7CE2991FB4B810004F7A4A /* Main.storyboard */; };
 		EA7CE2A71FB4B810004F7A4A /* Facebook_LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CE2A61FB4B810004F7A4A /* Facebook_LoginTests.swift */; };
-		EA7CE2C71FB4BC11004F7A4A /* Facebook_Mac_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7CE2B81FB4BBBB004F7A4A /* Facebook_Mac_Login.framework */; };
-		EA7CE2C91FB4BC26004F7A4A /* Facebook_Mac_Login.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7CE2B81FB4BBBB004F7A4A /* Facebook_Mac_Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EAD408C41FC1BF5200950035 /* FacebookWebLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD408BB1FC1BF5200950035 /* FacebookWebLogin.framework */; };
 		EAD408C91FC1BF5200950035 /* FacebookWebLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD408C81FC1BF5200950035 /* FacebookWebLoginTests.swift */; };
 		EAD408CB1FC1BF5200950035 /* FacebookWebLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD408BD1FC1BF5200950035 /* FacebookWebLogin.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9ADCC9E61FC808860095350A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7CE2881FB4B810004F7A4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAD408BA1FC1BF5200950035;
+			remoteInfo = FacebookWebLogin;
+		};
 		EA7CE2A31FB4B810004F7A4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA7CE2881FB4B810004F7A4A /* Project object */;
@@ -43,13 +53,6 @@
 			remoteGlobalIDString = EA6C09ED1F9F883E004FD78F;
 			remoteInfo = "Facebook Mac LoginTests";
 		};
-		EA7CE2C21FB4BC04004F7A4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA7CE2B21FB4BBBB004F7A4A /* Facebook Mac Login.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EA6C09E31F9F883D004FD78F;
-			remoteInfo = "Facebook Mac Login";
-		};
 		EAD408C51FC1BF5200950035 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA7CE2881FB4B810004F7A4A /* Project object */;
@@ -66,13 +69,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EA7CE2C91FB4BC26004F7A4A /* Facebook_Mac_Login.framework in CopyFiles */,
+				9ADCC9E91FC8096F0095350A /* FacebookWebLogin.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A83DBF41FC69C57001A4ED4 /* LoginKitURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginKitURLs.swift; sourceTree = "<group>"; };
+		9AA2838C1FCA66D10050CDA7 /* Facebook Login.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Facebook Login.entitlements"; sourceTree = "<group>"; };
+		9ADCC9E11FC71EC90095350A /* FacebookLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginController.swift; sourceTree = "<group>"; };
+		9ADCC9E41FC71EF60095350A /* FacebookLoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookLoginController.xib; sourceTree = "<group>"; };
 		EA7CE2901FB4B810004F7A4A /* Facebook Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Facebook Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7CE2931FB4B810004F7A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA7CE2951FB4B810004F7A4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7CE2C71FB4BC11004F7A4A /* Facebook_Mac_Login.framework in Frameworks */,
+				9ADCC9E81FC8088D0095350A /* FacebookWebLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +162,7 @@
 		EA7CE2921FB4B810004F7A4A /* Facebook Login */ = {
 			isa = PBXGroup;
 			children = (
-				EAD408B41FC1BF1300950035 /* FacebookWebLogin */,
+				9AA2838C1FCA66D10050CDA7 /* Facebook Login.entitlements */,
 				EA7CE2931FB4B810004F7A4A /* AppDelegate.swift */,
 				EA7CE2951FB4B810004F7A4A /* ViewController.swift */,
 				EA7CE2971FB4B810004F7A4A /* Assets.xcassets */,
@@ -191,13 +198,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EAD408B41FC1BF1300950035 /* FacebookWebLogin */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FacebookWebLogin;
-			sourceTree = "<group>";
-		};
 		EAD408BC1FC1BF5200950035 /* FacebookWebLogin */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +205,9 @@
 				EAD408BE1FC1BF5200950035 /* Info.plist */,
 				EAD408D21FC1BFA800950035 /* FBAuthToken.swift */,
 				EAD408D41FC1D8FD00950035 /* FBLoginController.swift */,
+				9A83DBF41FC69C57001A4ED4 /* LoginKitURLs.swift */,
+				9ADCC9E11FC71EC90095350A /* FacebookLoginController.swift */,
+				9ADCC9E41FC71EF60095350A /* FacebookLoginController.xib */,
 			);
 			path = FacebookWebLogin;
 			sourceTree = "<group>";
@@ -244,7 +247,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EA7CE2C31FB4BC04004F7A4A /* PBXTargetDependency */,
+				9ADCC9E71FC808860095350A /* PBXTargetDependency */,
 			);
 			name = "Facebook Login";
 			productName = "Facebook Login";
@@ -400,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ADCC9E51FC71EF60095350A /* FacebookLoginController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +439,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAD408D31FC1BFA800950035 /* FBAuthToken.swift in Sources */,
+				9A83DBF51FC69C57001A4ED4 /* LoginKitURLs.swift in Sources */,
 				EAD408D51FC1D8FD00950035 /* FBLoginController.swift in Sources */,
+				9ADCC9E21FC71EC90095350A /* FacebookLoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,15 +456,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9ADCC9E71FC808860095350A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAD408BA1FC1BF5200950035 /* FacebookWebLogin */;
+			targetProxy = 9ADCC9E61FC808860095350A /* PBXContainerItemProxy */;
+		};
 		EA7CE2A41FB4B810004F7A4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA7CE28F1FB4B810004F7A4A /* Facebook Login */;
 			targetProxy = EA7CE2A31FB4B810004F7A4A /* PBXContainerItemProxy */;
-		};
-		EA7CE2C31FB4BC04004F7A4A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Facebook Mac Login";
-			targetProxy = EA7CE2C21FB4BC04004F7A4A /* PBXContainerItemProxy */;
 		};
 		EAD408C61FC1BF5200950035 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -589,7 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Facebook Login/Facebook_Login.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Facebook Login/Facebook Login.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -606,7 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Facebook Login/Facebook_Login.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Facebook Login/Facebook Login.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
