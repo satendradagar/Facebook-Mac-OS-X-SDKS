@@ -190,7 +190,7 @@ NSURLSessionDataDelegate
   }
   [FBSDKGraphRequestPiggybackManager addPiggybackRequests:self];
   NSMutableURLRequest *request = [self requestWithBatch:self.requests timeout:_timeout];
-
+  NSLog(@"requst:%@",request);
   self.state = kStateStarted;
 
   [self logRequest:request bodyLength:0 bodyLogger:nil attachmentLogger:nil];
@@ -379,7 +379,7 @@ NSURLSessionDataDelegate
   FBSDKLogger *bodyLogger = [[FBSDKLogger alloc] initWithLoggingBehavior:_logger.loggingBehavior];
   FBSDKLogger *attachmentLogger = [[FBSDKLogger alloc] initWithLoggingBehavior:_logger.loggingBehavior];
 
-  NSMutableURLRequest *request;
+  NSMutableURLRequest *request = nil;
 
   if (requests.count == 0) {
     [[NSException exceptionWithName:NSInvalidArgumentException
@@ -505,6 +505,7 @@ NSURLSessionDataDelegate
                                        data:(NSData *)data
                                networkError:(NSError *)error
 {
+  NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
   if (self.state != kStateCancelled) {
     NSAssert(self.state == kStateStarted,
              @"Unexpected state %lu in completeWithResponse",

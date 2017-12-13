@@ -113,6 +113,8 @@ static int const FBSDKTokenRefreshRetrySeconds = 60 * 60;           // hour
   dispatch_once(&onceToken, ^{
     lastRefreshTry = [NSDate distantPast];
   });
+//  NSLog(@"%@-%@-%@",[FBSDKAccessToken currentAccessToken].expirationDate,[FBSDKAccessToken currentAccessToken].tokenString,[FBSDKAccessToken currentAccessToken].refreshDate);
+  NSLog(@"%@",[FBSDKAccessToken currentAccessToken].tokenString);
 
   NSDate *now = [NSDate date];
   NSDate *tokenRefreshDate = [FBSDKAccessToken currentAccessToken].refreshDate;

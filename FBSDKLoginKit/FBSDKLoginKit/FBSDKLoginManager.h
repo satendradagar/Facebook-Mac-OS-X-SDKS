@@ -18,6 +18,7 @@
 
 #import <Accounts/Accounts.h>
 #import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
 @class FBSDKLoginManagerLoginResult;
 
@@ -153,10 +154,10 @@ __attribute__ ((deprecated("use logInWithPublishPermissions:fromViewController:h
  You can only do one login call at a time. Calling a login method before the completion handler is called
  on a previous login will return an error.
  */
-//- (void)logInWithReadPermissions:(NSArray *)permissions
-//              fromViewController:(UIViewController *)fromViewController
-//                         handler:(FBSDKLoginManagerRequestTokenHandler)handler;
-//
+- (void)logInWithReadPermissions:(NSArray *)permissions
+              fromViewController:(NSViewController *)fromViewController
+                         handler:(FBSDKLoginManagerRequestTokenHandler)handler;
+
 /**
   Logs the user in or authorizes additional permissions.
  - Parameter permissions: the optional array of permissions. Note this is converted to NSSet and is only
@@ -176,7 +177,7 @@ __attribute__ ((deprecated("use logInWithPublishPermissions:fromViewController:h
  on a previous login will return an error.
  */
 - (void)logInWithPublishPermissions:(NSArray *)permissions
-                 fromViewController:(id )fromViewController
+                 fromViewController:(NSViewController *)fromViewController
                             handler:(FBSDKLoginManagerRequestTokenHandler)handler;
 
 /**

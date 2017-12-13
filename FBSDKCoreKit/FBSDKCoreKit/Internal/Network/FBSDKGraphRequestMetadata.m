@@ -27,10 +27,10 @@
               completionHandler:(FBSDKGraphRequestHandler)handler
                 batchParameters:(NSDictionary *)batchParameters {
 
-  if ((self = [super init])) {
-    _request = request;
-    _batchParameters = [batchParameters copy];
-    _completionHandler = [handler copy];
+  if (self = [super init]) {
+    self.request = request;
+    self.batchParameters = batchParameters ;
+    self.completionHandler = handler;
   }
   return self;
 }

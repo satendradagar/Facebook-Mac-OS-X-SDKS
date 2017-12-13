@@ -99,23 +99,23 @@ typedef NS_ENUM(NSInteger, FBSDKLoginManagerState) {
                             handler:handler];
 }
 
-//- (void)logInWithPublishPermissions:(NSArray *)permissions
-//                 fromViewController:(UIViewController *)fromViewController
-//                            handler:(FBSDKLoginManagerRequestTokenHandler)handler
-//{
-//  if (![self validateLoginStartState]) {
-//    return;
-//  }
-//  [self assertPermissions:permissions];
-//  NSSet *permissionSet = [NSSet setWithArray:permissions];
-//  if (![FBSDKInternalUtility areAllPermissionsPublishPermissions:permissionSet]) {
-//    [self raiseLoginException:[NSException exceptionWithName:NSInvalidArgumentException
-//                                                      reason:@"Read permissions are not permitted to be requested with publish or manage permissions."
-//                                                    userInfo:nil]];
-//  }
-//  self.fromViewController = fromViewController;
-//  [self logInWithPermissions:permissionSet handler:handler];
-//}
+- (void)logInWithPublishPermissions:(NSArray *)permissions
+                 fromViewController:(NSViewController *)fromViewController
+                            handler:(FBSDKLoginManagerRequestTokenHandler)handler
+{
+  if (![self validateLoginStartState]) {
+    return;
+  }
+  [self assertPermissions:permissions];
+  NSSet *permissionSet = [NSSet setWithArray:permissions];
+  if (![FBSDKInternalUtility areAllPermissionsPublishPermissions:permissionSet]) {
+    [self raiseLoginException:[NSException exceptionWithName:NSInvalidArgumentException
+                                                      reason:@"Read permissions are not permitted to be requested with publish or manage permissions."
+                                                    userInfo:nil]];
+  }
+  self.fromViewController = fromViewController;
+  [self logInWithPermissions:permissionSet handler:handler];
+}
 
 - (void)logOut
 {

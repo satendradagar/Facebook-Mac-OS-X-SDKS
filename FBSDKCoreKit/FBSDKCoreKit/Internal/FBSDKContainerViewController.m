@@ -22,7 +22,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-  [super viewDidDisappear:animated];
+//  [super viewDidDisappear:animated];
   if ([self.delegate respondsToSelector:@selector(viewControllerDidDisappear:animated:)]) {
     [self.delegate viewControllerDidDisappear:self animated:animated];
   }
@@ -72,7 +72,7 @@
                                    constant:0.0],
    ]];
 
-  [childController didMoveToParentViewController:self];
+//  [childController didMoveToParentViewController:self];
 }
 
 @end

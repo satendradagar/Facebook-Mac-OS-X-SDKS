@@ -300,7 +300,7 @@ static const struct
         dictionary[FBSDKBridgeAPIProtocolNativeV1DataKeys.isPasteboard] = @YES;
         dictionary[FBSDKBridgeAPIProtocolNativeV1DataKeys.tag] = dataTag;
         dictionary[FBSDKBridgeAPIProtocolNativeV1DataKeys.value] = _pasteboard.name;
-        [_pasteboard setData:data forPasteboardType:FBSDKBridgeAPIProtocolNativeV1DataPasteboardKey];
+//        [_pasteboard setData:data forPasteboardType:FBSDKBridgeAPIProtocolNativeV1DataPasteboardKey];
         // this version of the protocol only supports a single item on the pasteboard, so if when we add an item, make
         // sure we don't add another item
         didAddToPasteboard = YES;
@@ -324,10 +324,10 @@ static const struct
 + (void)clearData:(NSData *)data fromPasteboardOnApplicationDidBecomeActive:(NSPasteboard *)pasteboard
 {
   void(^notificationBlock)(NSNotification *) = ^(NSNotification *note){
-    NSData *pasteboardData = [pasteboard dataForPasteboardType:FBSDKBridgeAPIProtocolNativeV1DataPasteboardKey];
-    if ([data isEqualToData:pasteboardData]) {
-      [pasteboard setData:[NSData data] forPasteboardType:FBSDKBridgeAPIProtocolNativeV1DataPasteboardKey];
-    }
+//    NSData *pasteboardData = [pasteboard dataForPasteboardType:FBSDKBridgeAPIProtocolNativeV1DataPasteboardKey];
+//    if ([data isEqualToData:pasteboardData]) {
+//      [pasteboard setData:[NSData data] forPasteboardType:FBSDKBridgeAPIProtocolNativeV1DataPasteboardKey];
+//    }
   };
   [[NSNotificationCenter defaultCenter] addObserverForName:FBSDKApplicationDidBecomeActiveNotification
                                                     object:[FBSDKApplicationDelegate sharedInstance]

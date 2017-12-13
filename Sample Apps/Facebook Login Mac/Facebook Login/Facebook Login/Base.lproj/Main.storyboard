@@ -721,6 +721,17 @@
                                     <action selector="loginWithSender:" target="XfG-lQ-9wD" id="2oU-Tt-G1E"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucA-XU-a70">
+                                <rect key="frame" x="336" y="24" width="212" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="Login" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="V3E-tH-sU9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="requestWithSender:" target="XfG-lQ-9wD" id="PeV-HH-yPW"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                 </viewController>

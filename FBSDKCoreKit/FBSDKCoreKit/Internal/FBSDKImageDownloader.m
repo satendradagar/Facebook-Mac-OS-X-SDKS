@@ -59,7 +59,7 @@ static NSString *const kCachedResponseUserInfoKeyTimestamp = @"timestamp";
 
   void (^completionWrapper)(NSCachedURLResponse *) = ^(NSCachedURLResponse *responseData){
     if (completion != NULL) {
-      NSImage *image = [NSImage imageWithData:responseData.data];
+      NSImage *image = [[NSImage alloc] initWithData:responseData.data];
       completion(image);
     }
   };

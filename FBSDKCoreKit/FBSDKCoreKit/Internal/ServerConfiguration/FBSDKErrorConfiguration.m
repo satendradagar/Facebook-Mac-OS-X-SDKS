@@ -74,6 +74,7 @@ static NSString *const kErrorCategoryLogin = @"login";
                                                   @{ @"code" : @4 },
                                                   @{ @"code" : @9 },
                                                   @{ @"code" : @17 },
+                                                  @{ @"code" : @33 },
                                                   @{ @"code" : @341 } ],
                                     @"recovery_message" : localizedTransientSuggestion,
                                     @"recovery_options" : @[ localizedOK]
@@ -87,8 +88,16 @@ static NSString *const kErrorCategoryLogin = @"login";
 
 - (FBSDKErrorRecoveryConfiguration *)recoveryConfigurationForCode:(NSString *)code subcode:(NSString *)subcode request:(FBSDKGraphRequest *)request
 {
-  code = code ?: @"*";
+//  code = (code!=nil)?code:@"*";
+  if (nil == code) {
+    code = @"*";
+  }
   subcode = subcode ?: @"*";
+  //SS TODO:
+  if (nil == code) {
+    return nil;
+  }
+  
   FBSDKErrorRecoveryConfiguration *configuration = (_configurationDictionary[code][subcode] ?:
                                                     _configurationDictionary[code][@"*"] ?:
                                                     _configurationDictionary[@"*"][subcode] ?:

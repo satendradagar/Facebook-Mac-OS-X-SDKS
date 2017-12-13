@@ -55,7 +55,7 @@
 
 static NSMutableArray *_completionBlocks;
 static BOOL _loadingServerConfiguration;
-static FBSDKServerConfiguration *_serverConfiguration;
+static FBSDKServerConfiguration *_serverConfiguration = nil;
 static NSError *_serverConfigurationError;
 static NSDate *_serverConfigurationErrorTimestamp;
 static const NSTimeInterval kTimeout = 4.0;
@@ -90,13 +90,15 @@ typedef NS_OPTIONS(NSUInteger, FBSDKServerConfigurationManagerAppEventsFeatures)
 + (FBSDKServerConfiguration *)cachedServerConfiguration
 {
   NSString *appID = [FBSDKSettings appID];
-  @synchronized(self) {
+//  @synchronized(self) {
     // load the server configuration if we don't have it already
-    [self loadServerConfigurationWithCompletionBlock:NULL];
+    [self loadServerConfigurationWithCompletionBlock:^(FBSDKServerConfiguration *serverConfiguration, NSError *error) {
+      
+    }];
 
     // use whatever configuration we have or the default
     return _serverConfiguration ?: [self _defaultServerConfigurationForAppID:appID];
-  }
+//  }
 }
 
 + (void)loadServerConfigurationWithCompletionBlock:(FBSDKServerConfigurationManagerLoadBlock)completionBlock
@@ -105,11 +107,11 @@ typedef NS_OPTIONS(NSUInteger, FBSDKServerConfigurationManagerAppEventsFeatures)
   NSString *appID = [FBSDKSettings appID];
   @synchronized(self) {
     // validate the cached configuration has the correct appID
-    if (_serverConfiguration && ![_serverConfiguration.appID isEqualToString:appID]) {
+//    if (_serverConfiguration && ![_serverConfiguration.appID isEqualToString:appID]) {
       _serverConfiguration = nil;
       _serverConfigurationError = nil;
       _serverConfigurationErrorTimestamp = nil;
-    }
+//    }
 
     // load the configuration from NSUserDefaults
     if (!_serverConfiguration) {
@@ -385,6 +387,9 @@ typedef NS_OPTIONS(NSUInteger, FBSDKServerConfigurationManagerAppEventsFeatures)
 
 + (BOOL)_serverConfigurationTimestampIsValid:(NSDate *)timestamp
 {
+  if (nil == timestamp) {
+    return NO;
+  }
   return ([[NSDate date] timeIntervalSinceDate:timestamp] < FBSDK_SERVER_CONFIGURATION_MANAGER_CACHE_TIMEOUT);
 }
 
@@ -401,11 +406,9 @@ typedef NS_OPTIONS(NSUInteger, FBSDKServerConfigurationManagerAppEventsFeatures)
     serverConfiguration = _serverConfiguration;
     serverConfigurationError = _serverConfigurationError;
   }
-  return NULL;
-  // SS TODO:
-//  return ^{
-//    loadBlock(serverConfiguration, serverConfigurationError);
-//  };
+  return ^{
+    loadBlock(serverConfiguration, serverConfigurationError);
+  };
 }
 
 #pragma mark - Object Lifecycle

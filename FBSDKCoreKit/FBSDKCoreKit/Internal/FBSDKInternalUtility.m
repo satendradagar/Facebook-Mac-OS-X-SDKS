@@ -491,6 +491,7 @@ static NSMapTable *_transientObjects;
 
 + (BOOL)isFacebookAppInstalled
 {
+  return NO;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
     [FBSDKInternalUtility checkRegisteredCanOpenURLScheme:FBSDK_CANOPENURL_FACEBOOK];

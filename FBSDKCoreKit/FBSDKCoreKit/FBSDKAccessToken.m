@@ -28,7 +28,7 @@ NSString *const FBSDKAccessTokenDidChangeUserID = @"FBSDKAccessTokenDidChangeUse
 NSString *const FBSDKAccessTokenChangeNewKey = @"FBSDKAccessToken";
 NSString *const FBSDKAccessTokenChangeOldKey = @"FBSDKAccessTokenOld";
 
-static FBSDKAccessToken *g_currentAccessToken;
+static FBSDKAccessToken *g_currentAccessToken = NULL;
 
 #define FBSDK_ACCESSTOKEN_TOKENSTRING_KEY @"tokenString"
 #define FBSDK_ACCESSTOKEN_PERMISSIONS_KEY @"permissions"
@@ -56,7 +56,7 @@ static FBSDKAccessToken *g_currentAccessToken;
   if ((self = [super init])) {
     _tokenString = [tokenString copy];
     _permissions = [NSSet setWithArray:permissions];
-    _declinedPermissions = [NSSet setWithArray:declinedPermissions];
+    _declinedPermissions = [[NSSet setWithArray:declinedPermissions] copy];
     _appID = [appID copy];
     _userID = [userID copy];
     _expirationDate = [expirationDate copy] ?: [NSDate distantFuture];
@@ -85,7 +85,7 @@ static FBSDKAccessToken *g_currentAccessToken;
       userInfo[FBSDKAccessTokenDidChangeUserID] = @YES;
     }
 
-    g_currentAccessToken = token;
+    g_currentAccessToken = token ;
 
     // Only need to keep current session in web view for the case when token is current
     // When token is abandoned cookies must to be cleaned up immediately

@@ -251,23 +251,23 @@ static NSString *g_overrideAppID = nil;
                                                         repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_flushTimer forMode:NSDefaultRunLoopMode];
     [[NSRunLoop mainRunLoop] addTimer:_attributionIDRecheckTimer forMode:NSDefaultRunLoopMode];
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(applicationMovingFromActiveStateOrTerminating)
-     name:NSApplicationWillResignActiveNotification
-     object:NULL];
+//    [[NSNotificationCenter defaultCenter]
+//     addObserver:self
+//     selector:@selector(applicationMovingFromActiveStateOrTerminating)
+//     name:NSApplicationWillResignActiveNotification
+//     object:NULL];
 
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(applicationMovingFromActiveStateOrTerminating)
-     name:NSApplicationWillTerminateNotification
-     object:NULL];
+//    [[NSNotificationCenter defaultCenter]
+//     addObserver:self
+//     selector:@selector(applicationMovingFromActiveStateOrTerminating)
+//     name:NSApplicationWillTerminateNotification
+//     object:NULL];
 
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(applicationDidBecomeActive)
-     name:NSApplicationDidBecomeActiveNotification
-     object:NULL];
+//    [[NSNotificationCenter defaultCenter]
+//     addObserver:self
+//     selector:@selector(applicationDidBecomeActive)
+//     name:NSApplicationDidBecomeActiveNotification
+//     object:NULL];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _userID = [defaults stringForKey:USER_ID_USER_DEFAULTS_KEY];

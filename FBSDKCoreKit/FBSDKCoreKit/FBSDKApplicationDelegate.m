@@ -171,8 +171,8 @@ static NSString *const FBSDKAppLinkInboundEvent = @"fb_al_inbound";
   // if they completed a SFVC flow, dismiss it.
   if (_safariViewController) {
     _isDismissingSafariViewController = YES;
-    [_safariViewController.presentingViewController dismissViewControllerAnimated:YES
-                                                                       completion:completePendingOpenURLBlock];
+//    [_safariViewController.presentingViewController dismissViewControllerAnimated:YES
+//                                                                       completion:completePendingOpenURLBlock];
     _safariViewController = nil;
   } else {
 

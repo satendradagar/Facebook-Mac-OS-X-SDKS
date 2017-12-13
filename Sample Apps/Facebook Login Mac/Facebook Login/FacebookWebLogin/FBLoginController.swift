@@ -50,6 +50,7 @@ let kFBStoreAccessPermissions = "FBStoreAccessPermissions"
             result["valid"] = (1)
             result["token"] = token.authenticationToken
             result["expiry"] = token.expiry
+            result["permissions"] = token.permissions
 
         }
         else {

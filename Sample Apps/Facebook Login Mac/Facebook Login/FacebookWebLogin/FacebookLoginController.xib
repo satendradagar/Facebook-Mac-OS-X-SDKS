@@ -38,7 +38,7 @@
                     </connections>
                 </webView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bxC-hC-VHb">
-                    <rect key="frame" x="407" y="7" width="82" height="32"/>
+                    <rect key="frame" x="98" y="7" width="82" height="32"/>
                     <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0UU-wo-z2C">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -55,7 +55,7 @@ Gw
                 <constraint firstAttribute="bottom" secondItem="4Lz-To-iYE" secondAttribute="bottom" constant="55" id="N6P-Sy-bMO"/>
                 <constraint firstAttribute="trailing" secondItem="4Lz-To-iYE" secondAttribute="trailing" id="V7k-5H-NMp"/>
                 <constraint firstItem="qKW-ST-inX" firstAttribute="leading" secondItem="PHL-L5-EJB" secondAttribute="leading" id="Wnb-fB-uXC"/>
-                <constraint firstAttribute="trailing" secondItem="bxC-hC-VHb" secondAttribute="trailing" constant="20" id="YAG-cj-njm"/>
+                <constraint firstAttribute="trailing" secondItem="bxC-hC-VHb" secondAttribute="trailing" constant="329" id="YAG-cj-njm"/>
                 <constraint firstAttribute="bottom" secondItem="qKW-ST-inX" secondAttribute="bottom" constant="55" id="lUq-ag-gFw"/>
                 <constraint firstAttribute="bottom" secondItem="bxC-hC-VHb" secondAttribute="bottom" constant="14" id="tFh-Qo-wqN"/>
                 <constraint firstAttribute="trailing" secondItem="qKW-ST-inX" secondAttribute="trailing" id="yod-uV-akU"/>

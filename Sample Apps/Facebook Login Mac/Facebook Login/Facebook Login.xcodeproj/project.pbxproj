@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1519E41FD06BEA008E3FF6 /* TODOLIST.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9A1519E31FD06BEA008E3FF6 /* TODOLIST.rtf */; };
+		9A601CA91FCD509200D69AE4 /* Facebook_Mac_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A601CAA1FCD509200D69AE4 /* Facebook_Mac_Core.framework */; };
+		9A601CAD1FCD509200D69AE4 /* Facebook_Mac_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7CE2B81FB4BBBB004F7A4A /* Facebook_Mac_Login.framework */; };
+		9A601CAE1FCD509900D69AE4 /* Facebook_Mac_Login.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7CE2B81FB4BBBB004F7A4A /* Facebook_Mac_Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A601CAF1FCD50A100D69AE4 /* Facebook_Mac_Core.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A601CAA1FCD509200D69AE4 /* Facebook_Mac_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A601CC11FCD553300D69AE4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A601CC31FCD553300D69AE4 /* FBSDKCoreKit.framework */; };
+		9A601CC21FCD553300D69AE4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A601CC41FCD553300D69AE4 /* FBSDKLoginKit.framework */; };
+		9A601CC51FCD553B00D69AE4 /* FBSDKCoreKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A601CC31FCD553300D69AE4 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A601CC61FCD553B00D69AE4 /* FBSDKLoginKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A601CC41FCD553300D69AE4 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A601CC81FCD832A00D69AE4 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A601CC71FCD832A00D69AE4 /* FacebookSDKStrings.bundle */; };
 		9A83DBF51FC69C57001A4ED4 /* LoginKitURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A83DBF41FC69C57001A4ED4 /* LoginKitURLs.swift */; };
 		9ADCC9E21FC71EC90095350A /* FacebookLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADCC9E11FC71EC90095350A /* FacebookLoginController.swift */; };
 		9ADCC9E51FC71EF60095350A /* FacebookLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ADCC9E41FC71EF60095350A /* FacebookLoginController.xib */; };
@@ -25,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A601CB01FCD50A800D69AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7CE2B21FB4BBBB004F7A4A /* Facebook Mac Login.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EA6C09E31F9F883D004FD78F;
+			remoteInfo = "Facebook Mac Login";
+		};
 		9ADCC9E61FC808860095350A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA7CE2881FB4B810004F7A4A /* Project object */;
@@ -69,6 +86,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9A601CC51FCD553B00D69AE4 /* FBSDKCoreKit.framework in CopyFiles */,
+				9A601CC61FCD553B00D69AE4 /* FBSDKLoginKit.framework in CopyFiles */,
+				9A601CAF1FCD50A100D69AE4 /* Facebook_Mac_Core.framework in CopyFiles */,
+				9A601CAE1FCD509900D69AE4 /* Facebook_Mac_Login.framework in CopyFiles */,
 				9ADCC9E91FC8096F0095350A /* FacebookWebLogin.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +97,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A1519E31FD06BEA008E3FF6 /* TODOLIST.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODOLIST.rtf; sourceTree = "<group>"; };
+		9A601CAA1FCD509200D69AE4 /* Facebook_Mac_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Facebook_Mac_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A601CC31FCD553300D69AE4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A601CC41FCD553300D69AE4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A601CC71FCD832A00D69AE4 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
 		9A83DBF41FC69C57001A4ED4 /* LoginKitURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginKitURLs.swift; sourceTree = "<group>"; };
 		9AA2838C1FCA66D10050CDA7 /* Facebook Login.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Facebook Login.entitlements"; sourceTree = "<group>"; };
 		9ADCC9E11FC71EC90095350A /* FacebookLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginController.swift; sourceTree = "<group>"; };
@@ -106,6 +132,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A601CC11FCD553300D69AE4 /* FBSDKCoreKit.framework in Frameworks */,
+				9A601CC21FCD553300D69AE4 /* FBSDKLoginKit.framework in Frameworks */,
+				9A601CA91FCD509200D69AE4 /* Facebook_Mac_Core.framework in Frameworks */,
+				9A601CAD1FCD509200D69AE4 /* Facebook_Mac_Login.framework in Frameworks */,
 				9ADCC9E81FC8088D0095350A /* FacebookWebLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +168,7 @@
 		EA7CE2871FB4B810004F7A4A = {
 			isa = PBXGroup;
 			children = (
+				9A601CC71FCD832A00D69AE4 /* FacebookSDKStrings.bundle */,
 				EA7CE2B21FB4BBBB004F7A4A /* Facebook Mac Login.xcodeproj */,
 				EA7CE2921FB4B810004F7A4A /* Facebook Login */,
 				EA7CE2A51FB4B810004F7A4A /* Facebook LoginTests */,
@@ -169,6 +200,7 @@
 				EA7CE2991FB4B810004F7A4A /* Main.storyboard */,
 				EA7CE29C1FB4B810004F7A4A /* Info.plist */,
 				EA7CE29D1FB4B810004F7A4A /* Facebook_Login.entitlements */,
+				9A1519E31FD06BEA008E3FF6 /* TODOLIST.rtf */,
 			);
 			path = "Facebook Login";
 			sourceTree = "<group>";
@@ -194,6 +226,9 @@
 		EA7CE2C61FB4BC11004F7A4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A601CC31FCD553300D69AE4 /* FBSDKCoreKit.framework */,
+				9A601CC41FCD553300D69AE4 /* FBSDKLoginKit.framework */,
+				9A601CAA1FCD509200D69AE4 /* Facebook_Mac_Core.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,6 +282,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A601CB11FCD50A800D69AE4 /* PBXTargetDependency */,
 				9ADCC9E71FC808860095350A /* PBXTargetDependency */,
 			);
 			name = "Facebook Login";
@@ -387,6 +423,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A1519E41FD06BEA008E3FF6 /* TODOLIST.rtf in Resources */,
+				9A601CC81FCD832A00D69AE4 /* FacebookSDKStrings.bundle in Resources */,
 				EA7CE2981FB4B810004F7A4A /* Assets.xcassets in Resources */,
 				EA7CE29B1FB4B810004F7A4A /* Main.storyboard in Resources */,
 			);
@@ -456,6 +494,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A601CB11FCD50A800D69AE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Facebook Mac Login";
+			targetProxy = 9A601CB01FCD50A800D69AE4 /* PBXContainerItemProxy */;
+		};
 		9ADCC9E71FC808860095350A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EAD408BA1FC1BF5200950035 /* FacebookWebLogin */;

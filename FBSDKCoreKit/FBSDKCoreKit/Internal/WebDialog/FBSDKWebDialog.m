@@ -152,7 +152,7 @@ static FBSDKWebDialog *g_currentDialog = nil;
   CFTimeInterval animationDuration = (animated ? [CATransactionClass animationDuration] : 0.0);
   [self _updateViewsWithScale:1.0 alpha:1.0 animationDuration:animationDuration completion:^(BOOL finished) {
     if (finished) {
-      [_dialogView setNeedsDisplay];
+      [_dialogView setNeedsDisplay:YES];
     }
   }];
 }

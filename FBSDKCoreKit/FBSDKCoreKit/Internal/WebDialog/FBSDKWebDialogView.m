@@ -68,7 +68,6 @@
 - (void)dealloc
 {
   _webView.UIDelegate = nil;
-  [super dealloc];
 }
 
 #pragma mark - Public Methods
